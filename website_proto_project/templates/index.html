@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luis Moreno - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+      integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/master.css' %}" />
+  </head>
+  <body>
+    <nav class="terminal-topbar">
+      <div class="dots">
+        <div style="display: none" role="button" class="dot red"></div>
+        <!-- <div class="dot yellow"></div>
+        <div class="dot green"></div> -->
+      </div>
+      <div class="text">
+        <div class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </div>
+        <div class="text_text"></div>
+      </div>
+      <div class="placeholder"></div>
+    </nav>
+    <div class="terminal-body col-md-9 col-12">
+      <div class="terminal-body-text"></div>
+      <div style="display: none" class="terminal-type-div">
+        <div
+          contenteditable="true"
+          aria-multiline="false"
+          role="text"
+          class="command"
+        ></div>
+        <span class="cursor"></span>
+      </div>
+    </div>
+    <div id="appdiv" class="app_closed col-md-12 col-12">
+    </div>
+    <div class="overlay"></div>
+    <script defer src="{% static 'js/homeView.js' %}"></script>
+  </body>
+</html>
